@@ -42,11 +42,14 @@ table {
 	border-spacing: 0;
 }
 
-.attribution { font-size: 11px; text-align: center; }
+.attribution { font-size: 0.6rem; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
 html,body,
 #app{height: 100%; 
+}
+*{
+  box-sizing: border-box;
 }
 #app{
   display: flex;
@@ -57,43 +60,38 @@ html,body,
 h1{
     color:  hsl(0, 0%, 95%);
     font-family: 'Big Shoulders Display', cursive;
-    font-family: 'Hanken Grotesk', sans-serif;
-    font-family: 'Lexend Deca', sans-serif;
     font-weight: 700;
-    letter-spacing: -1px;
+    font-size: 2.5rem;
     padding-top: 40px;
-    padding-bottom: 40px;
-    font-size: 30px;
+    padding-bottom: 27px;
 }
 
 p{
     color: hsla(0, 0%, 100%, 0.75);
-    font-size: 15px;
-    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 0.9rem;
     font-family: 'Lexend Deca', sans-serif;
-    line-height: 27px;
+    line-height: 1.7em;
     font-weight: 400;   
 }
 
-.box{
+.container{
 
-    height: 500px;
-    width: 920px;
+    min-height: 500px;
+    max-width: 920px;
     display: flex;
-    border-radius: 5px;
+    border-radius: 7px;
+    overflow: hidden;
+    
 
 }
- img{
-    margin-top: 20px;
-} 
 .orange-side,
 .blue-side,
 .green-side{
 
-    width: 305px;
+    width: 33.33%;
     display: flex;
     flex-direction: column;
-    padding: 47px 45px;
+    padding: 47px 51px 47px 45px;
     justify-content:space-between; 
 }
 
@@ -111,26 +109,22 @@ p{
 
 
 
-
-
-
-
 .button{
     background-color: hsl(0, 0%, 95%) ;
     border: 0px;
-    border-radius: 20px;
+    border-radius: 25px;
     height: 45px;
     width: 147px;
     font-weight: 400;
-    font-family: 'Hanken Grotesk', sans-serif;
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 400;
 }
-:hover.button{
+.button:hover{
     cursor:pointer;
     color:  hsl(0, 0%, 95%);
     border-color: hsl(0, 0%, 95%);
     border: 2px solid hsl(0, 0%, 95%);
+    background-color: transparent;
 }
 .orange-side-button{
     color: hsl(31, 77%, 52%);
@@ -141,25 +135,15 @@ p{
 .green-side-button{
     color: hsl(179, 100%, 13%);
 }
-:hover.orange-side-button{
-    background-color: hsl(31, 77%, 52%);    
-}
-:hover.blue-side-button{
-    background-color: hsl(184, 100%, 22%);   
-}
-:hover.green-side-button{
-    background-color: hsl(179, 100%, 13%); 
-} 
 
 
-
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 700px) {
 
 p{
     padding-bottom: 30px;
 }    
     
-.box {
+.container {
       flex-direction: column;
       width: 100%;
     }
@@ -169,17 +153,18 @@ p{
 .green-side{
     width: 100%; 
     box-sizing: border-box; 
+    
   }
   
   #app{height: auto;
+    padding: 25px;
   }
   }
   
   .attribution
   {
     text-align:center;
-    font-family: 'Hanken Grotesk', sans-serif;
     font-family: 'Lexend Deca', sans-serif;
-    font-size: 14px; 
    
   }
+
